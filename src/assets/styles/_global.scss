@@ -16,3 +16,43 @@ img {
   object-fit: cover;
   object-position: center;
 }
+
+.btn {
+  color: #FFF;
+  font-style: normal;
+  line-height: normal;
+  border-radius: 83px;
+  background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+  border: 0;
+  cursor: pointer;
+  transition: .5s ease all;
+  @include flexCenterCenter;
+  text-decoration: none;
+  outline: none;
+
+  &:hover {
+    box-shadow: 0 0 13px 8px rebeccapurple;
+  }
+}
+
+section + section {
+  margin-top: 80px;
+
+  @include breakpoint(lg) {
+    margin-top: 160px;
+  }
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+
+  @include breakpoint(lg) {
+    font-size: 32px;
+    margin-bottom: 60px;
+    text-align: left;
+  }
+}

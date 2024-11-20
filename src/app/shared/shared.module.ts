@@ -4,6 +4,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import {RouterOutlet} from '@angular/router';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { TechnologiesItemComponent } from './components/technologies-item/technologies-item.component';
 
 
 
@@ -11,7 +13,13 @@ import {RouterOutlet} from '@angular/router';
   declarations: [
     LayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectCardComponent,
+    TechnologiesItemComponent
+  ],
+  exports: [
+    ProjectCardComponent,
+    TechnologiesItemComponent
   ],
   imports: [
     CommonModule,

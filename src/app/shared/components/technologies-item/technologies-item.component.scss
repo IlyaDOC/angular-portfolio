@@ -1,0 +1,106 @@
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/variables";
+
+.technologies-item {
+  max-width: 1000px;
+  margin-left: 20px;
+
+  @include breakpoint(lg) {
+    margin-left: 40px;
+  }
+  &__skill {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 20px 10px;
+    font-weight: 600;
+
+    &-name {
+      font-size: 22px;
+
+      @include breakpoint(lg) {
+        font-size: 28px;
+      }
+    }
+
+    &-level {
+      font-size: 12px;
+      text-transform: capitalize;
+
+      @include breakpoint(lg) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__scale {
+    height: 15px;
+    border-radius: 83px;
+    background: #162950;
+    position: relative;
+    box-sizing: border-box;
+
+    @include breakpoint(lg) {
+      height: 30px;
+    }
+
+
+    &:after {
+      content: '';
+      position: absolute;
+      border-radius: 83px;
+      background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+      height: 100%;
+      width: 0;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+}
+
+
+@keyframes progress-beginner {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 25%;
+  }
+}
+
+@keyframes progress-regular {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes progress-advanced {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 75%;
+  }
+}
+
+[data-lvl="advanced"]:after {
+  animation: progress-advanced 3s linear;
+  animation-fill-mode: forwards;
+}
+
+[data-lvl="regular"]:after {
+  animation: progress-regular 3s linear;
+  animation-fill-mode: forwards;
+}
+
+[data-lvl="beginner"]:after {
+  animation: progress-beginner 3s linear;
+  animation-fill-mode: forwards;
+}

@@ -4,6 +4,11 @@
 
 .footer {
   padding: 20px 0;
+  margin-top: 80px;
+
+  @include breakpoint(lg) {
+    margin-top: 160px;
+  }
 
   &__inner {
     display: grid;

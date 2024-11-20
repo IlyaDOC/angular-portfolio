@@ -1,0 +1,63 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.project-item {
+  border-radius: 30px 0;
+  padding: 25px 25px 45px;
+  transition: $transition;
+  display: grid;
+
+  &:hover {
+    box-shadow: 0 0 12px 0 #FFF;
+    scale: 1.05;
+  }
+
+  a.btn {
+    padding: 15px;
+
+    @include breakpoint(md) {
+      padding: 15px 52px;
+      width: fit-content;
+    }
+  }
+
+  &__image {
+    margin-bottom: 20px;
+
+    img {
+      border-radius: 30px 0 0;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 32px;
+    margin: 20px 0;
+    text-align: center;
+
+    @include breakpoint(md) {
+      font-size: 26px;
+    }
+  }
+
+  &__line {
+    margin: 0 auto 25px;
+    width: 80%;
+    height: 4px;
+    border-radius: 83px;
+    background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+  }
+
+  &__description {
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 25px;
+    height: 100px;
+    overflow: auto;
+
+    @include breakpoint(md) {
+      font-size: 18px;
+    }
+  }
+}
