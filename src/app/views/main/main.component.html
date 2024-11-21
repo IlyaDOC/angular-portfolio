@@ -11,29 +11,30 @@
           По образованию я травматолог-ортопед, но в итоге нашел свое призвание в мире IT.
         </p>
       </div>
-      <a class="btn" href="#">Начнем</a>
+      <a class="btn" routerLink="/" fragment="projects">Начнем</a>
     </div>
   </div>
   <div class="hero__image">
     <img src="assets/images/main.svg" alt="Rectangle">
   </div>
 </section>
-<section class="projects">
+<section class="projects" id="projects">
   <div class="container">
     <div class="projects__inner">
       <div class="section-title">Проекты</div>
       <div class="projects__items">
-          <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+        <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
       </div>
     </div>
   </div>
 </section>
-<section class="technologies">
+
+<section class="technologies" id="technologies">
   <div class="container">
     <div class="technologies__inner">
       <div class="section-title">Технологии</div>
       <div class="technologies__items">
-          <app-technologies-item *ngFor="let skill of skills" [skill]="skill"></app-technologies-item>
+        <app-technologies-item *ngFor="let skill of skills" [skill]="skill"></app-technologies-item>
       </div>
     </div>
     <div class="technologies__additional">
@@ -44,18 +45,11 @@
     </div>
   </div>
 </section>
-<section class="about">
+<section class="about" id="about">
   <div class="container">
     <div class="about__inner">
-      <p-timeline [value]="events">
-        <ng-template pTemplate="content" let-event>
-          <p-card>
-            <p>{{event.date}}</p>
-            <p>{{event.title}}</p>
-            <p>{{event.details}}</p>
-          </p-card>
-        </ng-template>
-      </p-timeline>
+      <div class="section-title">Обо мне</div>
+      <app-timeline></app-timeline>
     </div>
   </div>
 </section>

@@ -103,6 +103,10 @@
 .technologies__items {
   display: grid;
   gap: 30px;
+
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .technologies__additional {
@@ -134,11 +138,6 @@
     }
   }
 }
-
-.about {
-  margin-bottom: 421px;
-}
-
 
 .about-title {
   font-size: 64px;
@@ -172,7 +171,6 @@
     background: #FFF;
     top: 65px;
     left: 224px;
-
   }
 }
 
@@ -196,8 +194,6 @@
   line-height: normal;
 }
 
-.p-card {
-  background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
-}
+
 
 

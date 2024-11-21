@@ -67,3 +67,11 @@
     }
   }
 }
+
+i.pi {
+  transition: $transition;
+
+  &:hover {
+    scale: 1.1
+  }
+}

@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './layout/layout.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import {RouterOutlet} from '@angular/router';
-import { ProjectCardComponent } from './components/project-card/project-card.component';
-import { TechnologiesItemComponent } from './components/technologies-item/technologies-item.component';
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {LayoutComponent} from './layout/layout.component';
+import {HeaderComponent} from './layout/header/header.component';
+import {FooterComponent} from './layout/footer/footer.component';
+import {RouterLink, RouterOutlet} from '@angular/router';
+import {ProjectCardComponent} from './components/project-card/project-card.component';
+import {TechnologiesItemComponent} from './components/technologies-item/technologies-item.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 
 @NgModule({
@@ -15,15 +15,19 @@ import { TechnologiesItemComponent } from './components/technologies-item/techno
     HeaderComponent,
     FooterComponent,
     ProjectCardComponent,
-    TechnologiesItemComponent
+    TechnologiesItemComponent,
+    TimelineComponent
   ],
   exports: [
     ProjectCardComponent,
-    TechnologiesItemComponent
+    TechnologiesItemComponent,
+    TimelineComponent
   ],
   imports: [
     CommonModule,
-    RouterOutlet
+    RouterOutlet,
+    RouterLink
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

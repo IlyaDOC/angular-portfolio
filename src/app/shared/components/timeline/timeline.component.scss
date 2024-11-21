@@ -1,0 +1,107 @@
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/variables";
+
+.timeline {
+  position: relative;
+  font-weight: 600;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    margin: 0;
+
+    @include breakpointCustom(992px) {
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &-point {
+    position: relative;
+    width: 100%;
+    & + .timeline-point {
+      margin-top: 30px;
+    }
+
+    .timeline-icon {
+      position: absolute;
+      left: -10px;
+      right: auto;
+      margin: 0;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      background: #000;
+
+      @include breakpointCustom(992px) {
+        top: 10px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+      }
+    }
+
+    .timeline-block {
+      transition: 0.5s ease all;
+      width: 85%;
+      margin-left: 15%;
+
+      @include breakpointCustom(992px) {
+        width: 45%;
+        margin: 0;
+      }
+
+      &.timeline-right {
+
+
+        @include breakpointCustom(992px) {
+          margin-left: 55%;
+        }
+
+        .timeline-content {
+          .timeline-date {
+            right: 55%;
+            left: unset;
+          }
+        }
+      }
+
+      .timeline-content {
+        transition: 0.5s ease all;
+        background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+        border-radius: 10px;
+        padding: 20px;
+
+        .timeline-date {
+          position: static;
+          margin-bottom: 15px;
+
+          @include breakpointCustom(992px) {
+            position: absolute;
+            left: 55%;
+            top: 15px;
+          }
+
+        }
+
+        .timeline-text {
+          p {
+            &:first-child {
+              font-size: 18px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

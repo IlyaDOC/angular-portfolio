@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   public isActive: boolean = false;
+  public isScrolled: boolean = false;
 
   constructor() {
   }
@@ -17,5 +18,10 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.isActive = !this.isActive;
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 0;
   }
 }

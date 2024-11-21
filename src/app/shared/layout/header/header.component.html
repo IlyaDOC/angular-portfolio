@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" [class.scrolled]="isScrolled">
   <div class="container">
     <div class="header__inner">
       <a href="/" class="header__logo">
@@ -12,23 +12,22 @@
             <path id="Ellipse 6" d="M22.99 21.41C23.65 21.2 24.33 21.26 24.9 21.55C25.52 21.86 25.95 22.39 26.16 22.99C26.37 23.65 26.31 24.33 26.02 24.9C25.71 25.52 25.19 25.95 24.58 26.16C23.92 26.37 23.24 26.31 22.67 26.02C22.05 25.71 21.62 25.19 21.41 24.58C21.2 23.92 21.26 23.24 21.55 22.67L22.42 23.11C22.24 23.48 22.22 23.9 22.34 24.27C22.48 24.67 22.76 24.97 23.11 25.15C23.48 25.33 23.9 25.35 24.27 25.23C24.67 25.09 24.97 24.81 25.15 24.46C25.33 24.09 25.35 23.67 25.23 23.3C25.09 22.9 24.81 22.6 24.46 22.42C24.09 22.24 23.67 22.22 23.3 22.34L22.99 21.41Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
             <circle id="Ellipse 7" r="0.500000" transform="matrix(-1 -2.04881e-16 2.04881e-16 -1 23.7901 23.79)" fill="#FFFFFF" fill-opacity="1.000000"/>
           </svg>
-
         </div>
         <div class="header__logo-text">Portfolio</div>
       </a>
       <nav class="header__navbar" [class.show]="isActive">
         <ul class="header__navbar-items">
           <li>
-            <a href="#">Проекты</a>
+            <a routerLink="/" fragment="projects" (click)="toggleMenu()">Проекты</a>
           </li>
           <li>
-            <a href="#">Технологии</a>
+            <a routerLink="/" fragment="technologies" (click)="toggleMenu()">Технологии</a>
           </li>
           <li>
-            <a href="#">Обо мне</a>
+            <a routerLink="/" fragment="about" (click)="toggleMenu()">Обо мне</a>
           </li>
           <li>
-            <a href="#">Контакты</a>
+            <a routerLink="/" fragment="footer" (click)="toggleMenu()">Контакты</a>
           </li>
         </ul>
       </nav>

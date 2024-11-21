@@ -1,0 +1,14 @@
+<div class="timeline">
+  <div class="timeline-point" *ngFor="let aboutItem of aboutItems; let i = index;">
+    <div class="timeline-icon"></div>
+    <div class="timeline-block" [class.timeline-right]="(i + 1) % 2 !== 0">
+      <div class="timeline-content">
+        <span class="timeline-date">{{aboutItem.date}}</span>
+        <div class="timeline-text">
+          <p>{{aboutItem.title}}</p>
+          <p>{{aboutItem.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
