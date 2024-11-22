@@ -1,0 +1,13 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-gray: #BCBCBC;
+  --color-bg: #0F1624;
+  --color-black-secondary: #111111;
+  --transition-style: all .3s ease;
+}
+
+$white: var(--color-white);
+$gray: var(--color-gray);
+$bg: var(--color-bg);
+$black-secondary: var(--color-black-secondary);
+$transition: var(--transition-style);
