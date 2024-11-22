@@ -63,8 +63,6 @@
     p + p {
       margin-top: 20px;
     }
-
-    //font-size: 36px;
   }
 
   &__image {
@@ -74,8 +72,17 @@
       display: block;
       position: absolute;
       top: 0;
-      right: -192px;
-      z-index: -1;
+      right: 0;
+      width: 758px;
+      height: 758px;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 0;
+        right: -192px;
+        z-index: -1;
+      }
     }
   }
 }

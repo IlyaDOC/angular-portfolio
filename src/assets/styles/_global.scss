@@ -1,10 +1,13 @@
 @import "mixins";
 @import "variables";
 
+html {
+
+}
+
 body {
   background-color: $bg;
 }
-
 
 * {
   margin: 0;
@@ -36,6 +39,7 @@ img {
   @include flexCenterCenter;
   text-decoration: none;
   outline: none;
+  font-weight: 600;
 
   &:hover {
     box-shadow: 0 0 13px 8px rebeccapurple;
@@ -62,4 +66,26 @@ section + section {
     margin-bottom: 60px;
     text-align: left;
   }
+}
+
+::-webkit-scrollbar {
+  //width: 1px;
+  //border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rebeccapurple;
+  border-radius: 10px;
+  width: 10px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rebeccapurple transparent;
 }

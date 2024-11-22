@@ -6,16 +6,20 @@
   font-weight: 600;
 
   &:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 4px;
-    background: #000;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: auto;
-    margin: 0;
+
+    @include breakpoint(md) {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 4px;
+      background: #000;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: auto;
+      margin: 0;
+    }
+
 
     @include breakpointCustom(992px) {
       right: 0;
@@ -31,14 +35,18 @@
     }
 
     .timeline-icon {
-      position: absolute;
-      left: -10px;
-      right: auto;
-      margin: 0;
-      height: 25px;
-      width: 25px;
-      border-radius: 50%;
-      background: #000;
+
+      @include breakpoint(md) {
+        position: absolute;
+        left: -10px;
+        right: auto;
+        margin: 0;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background: #000;
+      }
+
 
       @include breakpointCustom(992px) {
         top: 10px;
@@ -50,9 +58,14 @@
     }
 
     .timeline-block {
-      transition: 0.5s ease all;
-      width: 85%;
-      margin-left: 15%;
+      width: 100%;
+
+      @include breakpoint(md) {
+        transition: 0.5s ease all;
+        width: 85%;
+        margin-left: 15%;
+      }
+
 
       @include breakpointCustom(992px) {
         width: 45%;
@@ -75,28 +88,48 @@
       }
 
       .timeline-content {
+        padding: 10px;
         transition: 0.5s ease all;
         background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
         border-radius: 10px;
-        padding: 20px;
-
+        @include breakpoint(md) {
+          padding: 20px;
+        }
         .timeline-date {
-          position: static;
-          margin-bottom: 15px;
+          margin-bottom: 10px;
+          font-size: 14px;
+
+          @include breakpoint(md) {
+            font-size: 16px
+          }
 
           @include breakpointCustom(992px) {
             position: absolute;
             left: 55%;
             top: 15px;
           }
-
         }
 
         .timeline-text {
           p {
             &:first-child {
-              font-size: 18px;
-              margin-bottom: 10px;
+              font-size: 16px;
+              margin-bottom: 15px;
+
+
+              @include breakpoint(md) {
+                font-size: 18px;
+                margin-bottom: 10px;
+
+              }
+            }
+
+            &:last-child {
+              font-size: 14px;
+
+              @include breakpoint(md) {
+                font-size: 16px
+              }
             }
           }
         }
