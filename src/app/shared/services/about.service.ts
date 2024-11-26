@@ -19,12 +19,7 @@ export class AboutService {
     {
       date: '2022',
       title: 'Stepik',
-      description: 'Поколение Python": курс для начинающих'
-    },
-    {
-      date: '2022',
-      title: 'Stepik',
-      description: 'Web-технологии: начальный уровень'
+      description: 'Поколение Python": курс для начинающих. Web-технологии: начальный уровень'
     },
     {
       date: 'c 2022 по 2024',
@@ -34,12 +29,7 @@ export class AboutService {
     {
       date: '2023',
       title: 'Stepik',
-      description: 'JavaScript для начинающих'
-    },
-    {
-      date: '2023',
-      title: 'Stepik',
-      description: 'Фундаментальный JavaScript'
+      description: 'JavaScript для начинающих. Фундаментальный JavaScript.'
     },
   ];
 

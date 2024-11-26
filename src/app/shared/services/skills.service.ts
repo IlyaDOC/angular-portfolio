@@ -11,7 +11,7 @@ export class SkillsService {
       level: 'advanced'
     },
     {
-      name: 'CSS, SASS',
+      name: 'CSS, SCSS',
       level: 'advanced'
     },
     {
