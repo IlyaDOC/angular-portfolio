@@ -48,6 +48,12 @@ export class ProjectsService {
       description: 'HTML, SCSS, Angular, Angular Material, RxJs, Angular Routing, Reactive Forms, Owl-Carousel. Backend: NodeJS',
       link: 'https://github.com/IlyaDOC/it-storm/tree/master'
     },
+    {
+      image: 'stroytehprokat.png',
+      title: 'Проект Стройтехпрокат',
+      description: 'PUG, SCSS, Gulp, Fancybox, Swiper-slider. Backend: Битрикс 1С',
+      link: 'https://stp-stroi.ru/'
+    },
   ];
 
   constructor() { }
